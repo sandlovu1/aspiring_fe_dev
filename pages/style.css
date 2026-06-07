@@ -1,0 +1,33 @@
+section {
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.skillBox {
+    border: 2pt solid red;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    /* margin-left: auto; */
+    background-color: rgb(197, 177, 148);
+    align-content: center;
+}
+.skillBox:hover{
+    background-color: rgb(192, 188, 181);
+    transform: translate(15px, 40px) rotate(165deg);
+    transition: all .6s ease-in-out;
+}

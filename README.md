@@ -6,6 +6,7 @@
 
 * I'm passionate about web development and concentrate on creating problem-solving websites and web applications that are adaptable, straightforward, and responsive. 
 
+`1. Challenges: - i designed a full clip image in the figma i struggle to structure the image full scale, but i managed to solve it [section> created a div> img > atricle for content.]`
 ## Project Roadmap
 
 - Goal:
