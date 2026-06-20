@@ -118,12 +118,12 @@ a {
 }
 
 .btn {
-    padding: 15px 25px;
-    font-size: 1.25rem;
     color: var(--color-neutral);
-    font-weight: 500;
     transition: all .3s ease;
-
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: none;
 }
 
 #chat {
@@ -140,8 +140,12 @@ a {
 }
 
 .btn-primary {
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    font-weight: 500;
     background: var(--btnColor);
     color: #ffffff;
+    border: none;
 }
 
 .btn-primary:is(:hover, :focus) {
@@ -149,6 +153,9 @@ a {
 }
 
 .btn-secondary {
+    font-weight: 500;
+    padding: 15px 25px;
+    font-size: 1.25rem;
     background: transparent;
     border: 1px solid var(--color-gray);
 }
@@ -168,11 +175,17 @@ a {
 
 }
 
-.card:is(:hover, :focus) {
+.card img:is(:hover, :focus) {
     transition: all .3s ease-in-out;
-    transform: scale(1.2);
+    transform: scale(1.1);
     background: var(--color-gray);
 }
+
+/* .card :is(:hover, :focus) {
+    transition: all .3s ease-in-out;
+    background: var();
+    border: 3pt solid #F3F4F6;
+} */
 
 .info {
     border-left: 3pt solid var(--btnColor);
@@ -192,6 +205,85 @@ a {
     margin: 0 auto;
 }
 
+
+/***** Navigation Section *****/
+nav {
+    /* border: 2pt solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-block: 1rem; */
+    margin-inline: auto;
+    padding: 2rem 1rem;
+    margin-bottom: var(--cardMarginBottom);
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--bgColor);
+    border-bottom: 1pt solid var(--color-gray);
+}
+
+#logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.navBar li {
+    list-style: none;
+}
+
+.navBar a:is(:hover) {
+    color: var(--color-neutral);
+}
+
+.toggleBtn {
+    display: none;
+}
+
+header {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: min(1200px, 100%);
+}
+
+.hero img {
+    flex: 1 1 45%;
+    max-width: 100%;
+
+}
+
+.hero .heroContent {
+    flex: 1 1 45%;
+
+}
+
+/* .hero img{
+    flex: 1;
+} */
+/***** End Navigation Section *****/
+
+/***** Skills Section *****/
 .skills-content {
     color: #fff;
     border-radius: 8px;
@@ -249,14 +341,60 @@ a {
 
 }
 
+/***** End Section *****/
+
+
+/***** Service Section *****/
+#service {
+    background: var(--aboutBg);
+}
+
+.grid-container {
+    background: var(--aboutBg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card button{
+    border: 1pt solid var(--color-charcoal);
+    margin: .5rem;
+}
+/***** End Service Section *****/
+
+
 section {
     padding: var(--sectionPadding);
     margin-bottom: var(--sectionMarginBottom);
 }
 
+/***** About Me *****/
 #about {
     background: var(--aboutBg);
+    display: flex;
+    gap: 2rem;
 }
+
+#about .about-content:nth-child(1) {
+    flex: 1;
+}
+
+#about .about-content:nth-child(2) {
+    flex: 2;
+}
+
+.about-info {
+    display: flex;
+    justify-content: flex-start;
+    padding-block: 1rem;
+}
+
+.info {
+    padding: 0 .7rem;
+}
+
+/***** End About Me *****/
+
 
 footer {
     background: var(--footerColor);
