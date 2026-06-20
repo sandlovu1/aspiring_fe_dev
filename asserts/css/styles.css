@@ -10,17 +10,21 @@
 :root {
     /* Professional Tech */
     --color-primary: #1E3A8A;
-    --color-accent: #14B8A6;
-    --color-highlight: #FFB703;
+
+    --color-accent: #e05252;
+    --color-highlight: #bd5b5b;
     --color-neutral: #F3F4F6;
+    --color-charcoal: #0e0e0e;
+    --color-gray: #303030;
+    --dark-text: #b4b4b4;
 
-    --navyColor: var(--color-primary);
-    --btnColor: var(--color-highlight);
-    --aboutBg: var(--color-neutral);
+    --navColorBg: var(--color-charcoal);
+    --bgColor: var(--color-charcoal);
+    --btnColor: var(--color-accent);
+    --fontColor: var(--color-neutral);
+    --aboutBg: var(--color-gray);
+    --footerColor: var(--color-gray);
 
-
-    --headerColor: #151426;
-    --footerColor: #07050D;
     --headFont: "Space Grotesk", sans-serif;
     --textFont: "DM Sans", sans-serif;
 
@@ -28,6 +32,7 @@
     /* Professional Tech → recruiters see structure, reliability, and focus. */
     --sectionPadding: 4rem 2rem;
     --sectionMarginBottom: 4rem;
+
     --cardPadding: 2rem;
     --cardMarginBottom: 2rem;
     --cardRadius: 0.5rem;
@@ -42,6 +47,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+    background: var(--bgColor);
 }
 
 h1 {
@@ -79,304 +85,35 @@ img {
     overflow: hidden;
 }
 
+.breakupPoints::before {
+    content: "// ";
+    font-weight: bold;
+    color: var(--btnColor);
+    margin-right: 4px;
+
+}
+
+span{
+    color: var(--btnColor);
+}
 /***** End Reset Blocks *****/
 .containner {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/***** Nav Section *****/
-header {
-    /* background: var(--navyColor); */
-    background: #fff;
-    color: var(--headerColor);
-    margin-bottom: var(--cardMarginBottom);
-}
 
-.hero.containner {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-    /* padding: var(--cardPadding); */
-    /* min-height: 100vh; */
-}
 
-.heroContent p{
-    text-align: left;
-}
-
-.btn {
-    padding: 10px 13px;
-    font-family: Sans-serif;
-    font-size: 1.105rem;
-    background: var(--btnColor);
-    border: none;
-    display: block;
-    color: var(--navyColor);
-    transition: all .3s ease;
-}
-
-.btn:hover {
-    background: var(--navyColor);
-    color: var(--color-neutral);
-    transform: scale(1.05);
-
-    box-shadow: 0 0 15px var(--color-primary);
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 70px;
-    background: var(--headerColor);
-    /* padding: var(--cardPadding); */
-}
-
-nav .navBar {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.navBar li {
-    list-style: none;
-}
-
-.navBar li a,
-#logo {
-    color: var(--color-neutral);
-    text-decoration: none;
-
-}
-
-/***** End Nav Section *****/
-
-/***** About Section *****/
-.about-flex {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    background: var(--aboutBg);
-    color: var(--footerColor);
-
-}
-
-.about-flex .aboutContent {
-    width: min(700px, 100%);
-    /* padding: 2rem; */
-    padding: var(--cardPadding);
-}
-
-.aboutContent h3 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-bottom: 1rem;
-    /* color: var(--color-accent); */
-}
-
-.social p {
-    font-weight: 600;
-    color: var(--color-highlight);
-    border-bottom: 1px solid var(--color-accent);
-}
-
-.social div {
-    padding: 1rem 0;
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-/***** About Section in Banner *****/
-#about {
+section {
     padding: var(--sectionPadding);
-
+    margin-bottom: var(--sectionMarginBottom);
 }
-
-#about h2 {
-    text-align: center;
-    color: var(--navyColor);
+#about{
+    background: var(--aboutBg);
 }
-
-.flex {
-    color: var(--footerColor);
-    border: 3px solid green;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 2rem;
-    padding: var(--cardPadding);
-    flex-wrap: wrap;
-}
-
-.flex-text {
-    max-width:37.5rem ;
-}
-
-.btn-group {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.flex-box {
-    border: 3px solid green;
-    flex: 1 1 40%;
-
-}
-
-/***** End About Section in Banner *****/
-
-span {
-    color: var(--color-accent);
-    font-weight: 700;
-}
-
-.fa-solid,
-.fa-brands {
-    color: var(--btnColor);
-}
-
-.fa-solid:hover,
-.fa-brands:hover {
-    color: var(--color-accent);
-    cursor: pointer;
-    transform: scale(1.03);
-}
-
-/***** End About Section *****/
-
-/***** Skills Section *****/
-.skills {
-    background: var(--navyColor);
-}
-
-.skills h2,
-p {
-    /* color: var(--headerColor); */
-    text-align: center;
-}
-
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.grid .box {
-    place-content: center;
-    transform: translateX(-50px, 50px);
-    margin: var(--cardPadding);
-    border: 2px solid rgba(231, 231, 231, 0.196);
-    border-radius: 50%;
-    padding: var(--cardPadding);
-    /* background-color: hsla(103, 100%, 48%, 0.471); */
-}
-
-/* .box:hover{
-    
-} */
-
-.box:hover {
-    animation: pulse 0.6s infinite alternate;
-}
-
-@keyframes pulse {
-    from {
-        transform: scale(1);
-        border-color: #0077b6;
-    }
-
-    to {
-        transform: scale(1.2);
-        border-color: #00b4d8;
-    }
-}
-
-/***** End Skills Section *****/
-
-/***** Footer Section *****/
 footer {
-    background: var(--navyColor);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.footer-social {
-    padding: 1rem 0;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.footer-social p {
-    margin-bottom: 0;
-}
-
-li {
-    list-style: none;
-}
-
-/***** End Footer Section *****/
-
-/***** Responsive Section *****/
-@media(max-width: 768px) {
-    nav .navBar {
-        display: none;
-    }
-
-    .about-flex {
-        flex-direction: column;
-        margin: auto;
-    }
-
-    .hero.containner {
-        margin: auto;
-        flex-direction: column;
-    }
-
-    .about-flex {
-        gap: .7rem;
-    }
-
-    .aboutContent h3 {
-        text-align: center;
-    }
-
-    .flex {
-        flex-direction: column;
-        padding: var(--cardPadding);
-    }
-
-    .flex-text p{
-        text-align: left;
-    }
-
-    footer {
-        flex-direction: column;
-        padding: .5rem;
-    }
-
-    .footer-social p {
-        margin-bottom: 0;
-    }
-
-    .footer-social {
-        /* flex-direction: column; */
-    }
+    background: var(--footerColor);
+    color: var(--dark-text);
 }
 
 /***** End Responsive Section *****/
