@@ -15,7 +15,7 @@
             </head>
             <body>
                 <nav>
-                    <a href="#home" id="logo">SN.</a>
+                    <a href="#home" id="logo">SN<span>.</span></a>
                     <ul class="navBar">
                         <!-- <li><a href="#">Home</a></li> -->
                         <li><a href="#">About</a></li>
@@ -23,7 +23,7 @@
                         <li><a href="#">Services</a></li>
                         <li><a href="#">My Work</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Lets Chat</a></li>
+                        <li><a href="#" id="chat">Lets Chat</a></li>
                     </ul>
                     <button class="toggleBtn"><svg
                             xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -40,9 +40,7 @@
                             <p class="breakupPoints">Web Developer . Based in
                                 South Africa</p>
 
-                            <h1>Hello,
-                                I'm Simon
-                                Ndlovu</h1>
+                            <h1>Hello,<br>I'm <span>Simon</span> <br>Ndlovu</h1>
                             <p>Founder of Freaky Coding — where tech meets
                                 creativity. I design responsive, accessible web
                                 experiences while experimenting with branding,
@@ -61,36 +59,6 @@
                     </article>
                 </header>
                 <main>
-                    <section id="skills">
-                        <div class="skills-content">
-                            <h2>Skills</h2>
-                            <p>Technology that i specialise with!</p>
-                            <div class="grid containner">
-                                <div class="box"><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        height="40px" viewBox="0 -960 960 960"
-                                        width="40px" fill="#FFB703"><path
-                                            d="M420-360q-17 0-28.5-11.5T380-400v-40h60v20h80v-40H420q-17 0-28.5-11.5T380-500v-60q0-17 11.5-28.5T420-600h120q17 0 28.5 11.5T580-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T580-460v60q0 17-11.5 28.5T540-360H420Zm260 0q-17 0-28.5-11.5T640-400v-40h60v20h80v-40H680q-17 0-28.5-11.5T640-500v-60q0-17 11.5-28.5T680-600h120q17 0 28.5 11.5T840-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T840-460v60q0 17-11.5 28.5T800-360H680Zm-520 0q-17 0-28.5-11.5T120-400v-160q0-17 11.5-28.5T160-600h120q17 0 28.5 11.5T320-560v40h-60v-20h-80v120h80v-20h60v40q0 17-11.5 28.5T280-360H160Z" /></svg></div>
-                                <div class="box"><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        height="40px" viewBox="0 -960 960 960"
-                                        width="40px" fill="#FFB703"><path
-                                            d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" /></svg></div>
-                                <div class="box"><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        height="40px" viewBox="0 -960 960 960"
-                                        width="40px" fill="#FFB703"><path
-                                            d="M0-360v-240h60v80h80v-80h60v240h-60v-100H60v100H0Zm310 0v-180h-70v-60h200v60h-70v180h-60Zm170 0v-200q0-17 11.5-28.5T520-600h180q17 0 28.5 11.5T740-560v200h-60v-180h-40v140h-60v-140h-40v180h-60Zm320 0v-240h60v180h100v60H800Z" /></svg></div>
-                                <div class="box"><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        height="40px" viewBox="0 -960 960 960"
-                                        width="40px" fill="#FFB703"><path
-                                            d="M460-126 181-336q-51-38-68-100t6-122l102-265q3-8 10-12.5t15-4.5q8 0 15.5 4.5T272-821l69 211h278l69-211q3-10 10.5-14.5T714-840q8 0 15 4.5t10 12.5l101 265q23 60 6 122t-68 100L498-126q-8 6-19 6t-19-6Z" /></svg></div>
-                                <div class="box"><span>Linux</span></div>
-                                <div class="box"><span>Linux</span></div>
-                            </div>
-                        </div>
-                    </section>
                     <section id="about">
 
                         <div class="about-content">
@@ -110,7 +78,8 @@
                             <p>My journey blends front-end development with
                                 entrepreneurial projects — from coding and UI/UX
                                 design to playful brand messaging and even local
-                                <span>iQanda egg sales.</span></p>
+                                <span class="iqanda">iQanda egg
+                                    sales.</span></p>
 
                             <p>I believe in learning by doing, refining through
                                 feedback, and creating digital experiences that
@@ -133,6 +102,86 @@
                             </div>
                         </div>
                     </section>
+                    <section class="skills">
+                        <p class="skill-breakPoint"></p>
+                        <h2>My Skills</h2>
+
+                        <div class="skills-content">
+                            <div class="skill">
+                                <span>Git</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Linux</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>HTML</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>CSS</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:70%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <span>JavaScript</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>React</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:10%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Sass/Less</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:15%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>BootStrap</span>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        style="width:45%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repeat for React, Git, Linux, Sass/SCSS, Bootstrap -->
+
+                        <h3>Also Familiar With</h3>
+                        <div class="tags">
+                            <!-- <span class="tag">Node.js</span> -->
+                            <span class="tag">Figma</span>
+                            <!-- <span class="tag">WordPress</span> -->
+                            <span class="tag">Python (basics)</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">VS Code</span>
+                        </div>
+                    </section>
+
                     <section></section>
                 </main>
 

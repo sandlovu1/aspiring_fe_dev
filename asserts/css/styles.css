@@ -11,13 +11,14 @@
     /* Professional Tech */
     --color-primary: #1E3A8A;
 
-    --color-accent: #e05252;
+    --color-accent: #f4520c;
     --color-highlight: #bd5b5b;
     --color-neutral: #F3F4F6;
     --color-charcoal: #0e0e0e;
     --color-gray: #303030;
     --dark-text: #b4b4b4;
 
+    --color-main-text: var(--dark-text);
     --navColorBg: var(--color-charcoal);
     --bgColor: var(--color-charcoal);
     --btnColor: var(--color-accent);
@@ -51,7 +52,8 @@ body {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    font-size: clamp(4rem, 5vw, 2.5rem);
     margin-bottom: 2rem;
     font-family: var(--headFont);
 }
@@ -85,6 +87,7 @@ img {
     overflow: hidden;
 }
 
+/***** Animates and hovers Effects *****/
 .breakupPoints::before {
     content: "// ";
     font-weight: bold;
@@ -93,27 +96,172 @@ img {
 
 }
 
-span{
+.skill-breakPoint::before {
+    content: "// 002 ";
+    font-weight: bold;
+    color: var(--btnColor);
+    margin-right: 4px;
+
+}
+
+span {
     color: var(--btnColor);
 }
+
+.iqanda {
+    color: #f0a307;
+}
+
+a {
+    color: var(--color-main-text);
+    text-decoration: none;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    color: var(--color-neutral);
+    font-weight: 500;
+    transition: all .3s ease;
+
+}
+
+#chat {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    color: var(--color-neutral);
+    font-weight: 500;
+    background: var(--btnColor);
+    transition: all .3s ease;
+}
+
+#chat:is(:hover, :focus) {
+    background: var(--color-highlight);
+}
+
+.btn-primary {
+    background: var(--btnColor);
+    color: #ffffff;
+}
+
+.btn-primary:is(:hover, :focus) {
+    background: var(--color-highlight);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--color-gray);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    border: 1pt solid var(--color-neutral);
+}
+
+.iconHover {
+    background: transparent;
+    border: 1pt solid var(--color-gray);
+    transition: all .3s ease;
+}
+
+.iconHover:is(:hover, :focus) {
+    border: 1pt solid var(--btnColor);
+
+}
+
+.card:is(:hover, :focus) {
+    transition: all .3s ease-in-out;
+    transform: scale(1.2);
+    background: var(--color-gray);
+}
+
+.info {
+    border-left: 3pt solid var(--btnColor);
+
+}
+
+.info>* {
+    margin-left: 15px;
+    line-height: 1;
+}
+
+/***** End Animates and hovers Effects *****/
+
 /***** End Reset Blocks *****/
 .containner {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.skills-content {
+    color: #fff;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: auto;
+    gap: 2rem;
+    place-content: center;
+}
 
+.skills-content {
+    margin-bottom: 1rem;
+}
+
+.skill span {
+    /* display: block; */
+    color: var(--color-neutral);
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.progress {
+    background: #333;
+    max-width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 4px;
+
+}
+
+.progress-bar {
+    background: var(--btnColor);
+    height: 100%;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    border: 1pt solid var(--color-gray);
+    color: var(--color-main-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all .3s ease-in-out;
+}
+
+.tag:is(:hover, :focus) {
+    border: 1pt solid var(--btnColor);
+    color: var(--color-neutral);
+
+}
 
 section {
     padding: var(--sectionPadding);
     margin-bottom: var(--sectionMarginBottom);
 }
-#about{
+
+#about {
     background: var(--aboutBg);
 }
+
 footer {
     background: var(--footerColor);
     color: var(--dark-text);
+    padding: var(--cardPadding);
 }
 
 /***** End Responsive Section *****/
