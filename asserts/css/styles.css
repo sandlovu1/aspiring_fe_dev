@@ -203,6 +203,9 @@ a {
 .containner {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -258,6 +261,9 @@ nav {
 header {
     padding: 100px 20px;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero {
@@ -265,6 +271,7 @@ header {
     justify-content: center;
     gap: 2rem;
     max-width: min(1200px, 100%);
+    align-items: center;
 }
 
 .hero img {
@@ -352,13 +359,43 @@ header {
 .grid-container {
     background: var(--aboutBg);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 2rem;
+    max-width: min(70rem, 100%);
+    margin-inline: auto;
+
+}
+.card{
+    background: #545454;
 }
 
-.card button{
+.card img{
+    /* max-inline-size: 100%; */
+    max-width: 100%;
+}
+.card-text{
+    padding: 1rem;
+
+}
+
+.card button {
     border: 1pt solid var(--color-charcoal);
     margin: .5rem;
+}
+
+.card-text h4{
+    margin-top: 1rem;
+}
+.btn-group{
+    /* border: 1px solid #1E3A8A; */
+}
+.btn-group button{
+    padding: 6px 12px;
+    font-size: 12px;
+    /* display: inline-block; */
+    background: transparent;
+    border: 1pt solid var(--color-gray);
+    color: var(--color-main-text);
 }
 /***** End Service Section *****/
 
@@ -371,8 +408,15 @@ section {
 /***** About Me *****/
 #about {
     background: var(--aboutBg);
+}
+
+#about .container {
     display: flex;
     gap: 2rem;
+    /* min-height: min(100vh - 200px); */
+    justify-content: center;
+    align-items: center;
+
 }
 
 #about .about-content:nth-child(1) {
