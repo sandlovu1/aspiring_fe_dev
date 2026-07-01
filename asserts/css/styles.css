@@ -18,6 +18,8 @@
     --color-gray: #303030;
     --dark-text: #b4b4b4;
 
+    --max-width: min(1200px, 100%);
+
     --color-main-text: var(--dark-text);
     --navColorBg: var(--color-charcoal);
     --bgColor: var(--color-charcoal);
@@ -47,7 +49,6 @@ body {
 
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
     background: var(--bgColor);
 }
 
@@ -74,6 +75,15 @@ p {
     margin-bottom: 1rem;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
 small,
 .caption {
     font-size: 0.875rem;
@@ -88,98 +98,6 @@ img {
 }
 
 /***** Animates and hovers Effects *****/
-.breakupPoints::before {
-    content: "// ";
-    font-weight: bold;
-    color: var(--btnColor);
-    margin-right: 4px;
-
-}
-
-.skill-breakPoint::before {
-    content: "// 002 ";
-    font-weight: bold;
-    color: var(--btnColor);
-    margin-right: 4px;
-
-}
-
-span {
-    color: var(--btnColor);
-}
-
-.iqanda {
-    color: #f0a307;
-}
-
-a {
-    color: var(--color-main-text);
-    text-decoration: none;
-}
-
-.btn {
-    color: var(--color-neutral);
-    transition: all .3s ease;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    background: transparent;
-    border: none;
-}
-
-#chat {
-    padding: 10px 20px;
-    font-size: 1.25rem;
-    color: var(--color-neutral);
-    font-weight: 500;
-    background: var(--btnColor);
-    transition: all .3s ease;
-}
-
-#chat:is(:hover, :focus) {
-    background: var(--color-highlight);
-}
-
-.btn-primary {
-    padding: 15px 25px;
-    font-size: 1.25rem;
-    font-weight: 500;
-    background: var(--btnColor);
-    color: #ffffff;
-    border: none;
-}
-
-.btn-primary:is(:hover, :focus) {
-    background: var(--color-highlight);
-}
-
-.btn-secondary {
-    font-weight: 500;
-    padding: 15px 25px;
-    font-size: 1.25rem;
-    background: transparent;
-    border: 1px solid var(--color-gray);
-}
-
-.btn-secondary:is(:hover, :focus) {
-    border: 1pt solid var(--color-neutral);
-}
-
-.iconHover {
-    background: transparent;
-    border: 1pt solid var(--color-gray);
-    transition: all .3s ease;
-}
-
-.iconHover:is(:hover, :focus) {
-    border: 1pt solid var(--btnColor);
-
-}
-
-.card img:is(:hover, :focus) {
-    transition: all .3s ease-in-out;
-    transform: scale(1.1);
-    background: var(--color-gray);
-}
 
 /* .card :is(:hover, :focus) {
     transition: all .3s ease-in-out;
@@ -200,24 +118,16 @@ a {
 /***** End Animates and hovers Effects *****/
 
 /***** End Reset Blocks *****/
-.containner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 
 /***** Navigation Section *****/
 nav {
-    /* border: 2pt solid yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-block: 1rem; */
-    margin-inline: auto;
+
     padding: 2rem 1rem;
+    height: 70px;
+    max-width: var(--ma);
     margin-bottom: var(--cardMarginBottom);
 
     position: fixed;
@@ -233,6 +143,7 @@ nav {
     font-size: 1.25rem;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
 }
 
 .navBar {
@@ -250,6 +161,11 @@ nav {
     list-style: none;
 }
 
+.navBar li a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
 .navBar a:is(:hover) {
     color: var(--color-neutral);
 }
@@ -262,11 +178,14 @@ header {
     padding: 100px 20px;
     min-height: 100vh;
     display: flex;
+    border: 1pt solid yellow;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
 }
 
 .hero {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -285,9 +204,7 @@ header {
 
 }
 
-/* .hero img{
-    flex: 1;
-} */
+
 /***** End Navigation Section *****/
 
 /***** Skills Section *****/
@@ -305,9 +222,9 @@ header {
     margin-bottom: 1rem;
 }
 
-.skill span {
-    /* display: block; */
-    color: var(--color-neutral);
+.skill span,
+span {
+    color: var(--btnColor);
     margin-bottom: 0.3rem;
     font-weight: bold;
 }
@@ -365,15 +282,16 @@ header {
     margin-inline: auto;
 
 }
-.card{
+
+.card {
     background: #545454;
 }
 
-.card img{
-    /* max-inline-size: 100%; */
-    max-width: 100%;
+.card img {
+    max-inline-size: 100%;
 }
-.card-text{
+
+.card-text {
     padding: 1rem;
 
 }
@@ -383,13 +301,11 @@ header {
     margin: .5rem;
 }
 
-.card-text h4{
+.card-text h4 {
     margin-top: 1rem;
 }
-.btn-group{
-    /* border: 1px solid #1E3A8A; */
-}
-.btn-group button{
+
+.btn-group button {
     padding: 6px 12px;
     font-size: 12px;
     /* display: inline-block; */
@@ -397,6 +313,7 @@ header {
     border: 1pt solid var(--color-gray);
     color: var(--color-main-text);
 }
+
 /***** End Service Section *****/
 
 
@@ -410,12 +327,13 @@ section {
     background: var(--aboutBg);
 }
 
-#about .container {
-    display: flex;
-    gap: 2rem;
-    /* min-height: min(100vh - 200px); */
-    justify-content: center;
-    align-items: center;
+
+
+.container {
+
+    border: 1px solid yellow;
+    max-inline-size: min(1200px, 100%);
+    margin-inline: auto;
 
 }
 
